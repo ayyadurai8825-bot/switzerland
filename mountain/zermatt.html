@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plan a visit to Zermatt and enjoy views of the Matterhorn.">
+<title>Zermatt and the Matterhorn | Switzerland Tourism</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../seasons/style.css">
+<style>
+    .gallery-panel {
+        border-radius: 1rem;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .gallery-main {
+        display: block;
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        background: #e9ecef;
+    }
+    .gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .gallery-thumbs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        background: #f8f9fa;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .gallery-thumb {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+    .gallery-thumb.active {
+        opacity: 1;
+    }
+    .gallery-thumb img {
+        width: 100%;
+        height: 88px;
+        object-fit: cover;
+        display: block;
+    }
+    .gallery-thumb span {
+        display: block;
+        font-size: 0.76rem;
+        padding: 0.45rem 0.35rem;
+        text-align: center;
+        background: #eef2f8;
+        color: #495057;
+    }
+    .gallery-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 0 0.9rem;
+        background: #f8f9fa;
+    }
+    .gallery-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #b7bec7;
+    }
+    .gallery-dot.active {
+        background: #0d6efd;
+    }
+</style>
+</head>
+<body>
+<header class="bg-primary text-white text-center p-3">
+    <h1 class="h2 mb-1">Zermatt and the Matterhorn</h1>
+    <p class="mb-0">Plan an alpine visit in Switzerland</p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">Switzerland</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../seasons/mountain-resorts.html">Mountain places</a>
+        </div>
+    </div>
+</nav>
+
+<nav class="bg-light border-bottom">
+    <div class="container d-flex flex-wrap gap-2 py-3 justify-content-center">
+        <a class="btn btn-sm btn-outline-primary" href="#overview">Overview</a>
+        <a class="btn btn-sm btn-outline-primary" href="#plan-your-visit">Plan your visit</a>
+        <a class="btn btn-sm btn-outline-primary" href="#experience">Experience</a>
+        <a class="btn btn-sm btn-outline-primary" href="#audio-guide">Audio guide</a>
+    </div>
+</nav>
+
+<main class="container py-5">
+    <div id="overview" class="row g-4 align-items-center">
+        <div class="col-lg-6">
+            <div class="gallery-panel" aria-label="Zermatt photo gallery">
+                <div class="gallery-main">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                         alt="Mountain scenery near Zermatt" loading="lazy">
+                </div>
+                <div class="gallery-thumbs" aria-label="Zermatt gallery thumbnails">
+                    <button class="gallery-thumb active" type="button" aria-label="View alpine view">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Alpine view">
+                        <span>Alps</span>
+                    </button>
+                    <button class="gallery-thumb" type="button" aria-label="View mountain trail">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Mountain trail">
+                        <span>Trail</span>
+                    </button>
+                    <button class="gallery-thumb" type="button" aria-label="View village and valley">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Village and valley">
+                        <span>Village</span>
+                    </button>
+                </div>
+                <div class="gallery-dots" aria-hidden="true">
+                    <span class="gallery-dot active"></span>
+                    <span class="gallery-dot"></span>
+                    <span class="gallery-dot"></span>
+                </div>
+            </div>
+        </div>
+        <div id="experience" class="col-lg-6">
+            <h2>Discover Zermatt</h2>
+            <p>
+                Zermatt is a car-free alpine village known for views of the Matterhorn.
+                Visitors can explore the village, take mountain excursions, and enjoy
+                walking routes or winter activities when conditions allow.
+            </p>
+            <h3 id="plan-your-visit" class="h4">Plan your visit</h3>
+            <ul>
+                <li>Check weather, trail conditions and mountain transport schedules before setting out.</li>
+                <li>Wear layers and suitable footwear for changing alpine conditions.</li>
+                <li>Review seasonal opening times and reserve activities in advance when needed.</li>
+            </ul>
+            <a class="btn btn-primary" href="https://www.zermatt.ch/en" target="_blank" rel="noopener noreferrer">
+                Visit the official Zermatt website
+            </a>
+        </div>
+    </div>
+    <section class="mt-5 border rounded-4 bg-white p-4 shadow-sm">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+                <h3 class="h4 mb-3">Why visit Zermatt?</h3>
+                <p class="mb-0">
+                    From glacier views and mountain railways to village walks and relaxed alpine dining,
+                    Zermatt offers a classic Swiss mountain experience for travelers looking for scenery,
+                    fresh air, and memorable outdoor adventures.
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a class="btn btn-outline-primary btn-lg" href="https://en.wikipedia.org/wiki/PTT_(Switzerland)" target="_blank" rel="noopener noreferrer">
+                    Explore more
+                </a>
+            </div>
+        </div>
+    </section>
+    <div id="audio-guide" class="mt-4">
+        <h3 class="h5">Listen to the Zermatt overview</h3>
+        <audio controls class="w-100">
+            <source src="../audio/welcome.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</main>
+
+<footer class="text-center p-3">
+    <a class="link-light" href="../seasons/mountain-resorts.html">Return to mountain places</a>
+</footer>
+</body>
+</html>

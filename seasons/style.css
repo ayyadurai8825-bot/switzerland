@@ -1,0 +1,64 @@
+body { background: #f5f7fa; }
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover;
+    min-height: 340px;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+}
+.layout-shell { width: 100%; }
+.page-content { min-width: 0; }
+.travel-sidebar { display: none; }
+.sidebar-list {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-link {
+    display: block;
+    overflow: hidden;
+    border-radius: .5rem;
+    background: white;
+    color: #212529;
+    text-decoration: none;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .12);
+}
+.sidebar-link img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.sidebar-link span { display: block; padding: .65rem .75rem; }
+.season-card { height: 100%; }
+.season-card figure { margin: 0; }
+.season-card img { width: 100%; max-width: 100%; height: auto; object-fit: cover; }
+.resort-card .card-img-top { height: 210px; object-fit: cover; }
+footer { background: #0d6efd; color: white; }
+
+@media screen and (min-width: 768px) {
+    .layout-shell {
+        display: grid;
+        grid-template-columns: minmax(12rem, 1fr) minmax(0, 3fr);
+        gap: 1.5rem;
+        align-items: start;
+        padding: 1.5rem;
+    }
+    .travel-sidebar {
+        display: block;
+        position: sticky;
+        top: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        background: #dbeafe;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .layout-shell { display: block; }
+    .travel-sidebar { display: none; }
+}
